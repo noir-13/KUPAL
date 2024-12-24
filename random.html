@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Message Generator with Categories</title>
+    <link rel="stylesheet" href="/bootstrap (1).css">
+    <link rel="stylesheet" href="/letter/style.css">
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+    background-image: url(https://wallpapers-clan.com/wp-content/uploads/2024/03/sanrio-cinnamoroll-blue-pattern-desktop-wallpaper-preview.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    color: #333;
+    text-align: center;
+    }
+
+h1{
+    color: palevioletred;
+
+   
+}
+p{
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#message-box {
+    font-size: 1.5em;
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #333;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: 20%;
+
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4.5px );
+-webkit-backdrop-filter: blur( 4.5px );
+border-radius: 10px;
+border: 2px solid rgba( 255, 255, 255, 0.18 );
+
+
+}
+select, button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+select:hover, button:hover {
+    background-color: #0056b3;
+}
+
+.back {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+</style>
+</head>
+<body>
+    
+
+    <h1>Random Message Generator</h1>
+    <p>Hello baby girl feifei ko. I made this program so if ever na wala si daddy po, my magrreply sayo po :)</p>
+    <p>Select a category and click the button to get a message!</p>
+    <select id="category" class="opt">
+        <option value="sad">Sad</option>
+        <option value="happy">Happy</option>
+        <option value="motivation">Motivation</option>
+        <option value="overthink">Overthink</option>
+    </select>
+    <br>
+    <button onclick="generateMessage()">Generate Message</button>
+    <div id="message-box">Your message will appear here!</div>
+<a href="index.html">    <button class="back"> Back </button></a> 
+
+    <script>
+        const messages = {
+    sad: [
+        "It's okay to feel sad sometimes. You are stronger than you know.",
+        "I'm always here for you baby ko, don't be sad na po :(",
+        "Cry if you need to, but don’t forget to smile after",
+        "I know sometimes life is hard,but I know ",
+        "You are loved more than you realize",
+        "awww why sad ang baby girl ko :(",
+        "sino nangaway sayo po baby ko? suntukin ko yan ",
+        "I know baby you're sad po kc pangit ng design ko dito HAHHAHAHAHHAHAHHAHAHAH",
+        "Alam mo ba, baby, na kahit malungkot ka, sobrang special ka pa rin sakin. but gusto ko magsmile na ikaw po, don't be sad na po baby ko :(",
+        "Hinga ka lang, baby and isipin mo na mahal na mahal na mahal kita sobra-sobra.",
+        "Andito lang ako po baby girl ko :( hug ikaw ni daddy kahit nasa malayo po:("
+    ],
+    happy: [
+        "Keep smiling baby, super cute mo po and masarap",
+        "yan ganyan dapat baby girl ko, always maging masaya po",
+        "Life is brighter when you're happy. Keep shining!",
+        "eyyyy masaya ang baby girl ni daddy, padede na po :(",
+        "kahit maliit na bagay baby masaya ikaw dapat po",
+        "Ngiti mo pa lang baby, super sarap na ng araw ko, ehe ;)",
+        "You're my happy pill bakla, so keep smiling baby, okay? :(",
+        "Pag masaya ikaw baby, masaya na rin si daddy po :("
+
+    ],
+    motivation: [
+        "magtiwala ikaw sa sarili mo po baby ko, kayang kaya mo yan po ",
+        "naniniwala ako po sayo baby ko",
+        "Every step forward counts, no matter how small.",
+        "Don't wait for opportunity; create it",
+        "Your determination today will shape your success tomorrow",
+        "always positive dapat po baby para happy and buhay buhay",
+        "Your time is limited, don't waste it living someone else's life.",
+        "The only way to do great work is to love what you do.",
+        "Believe you can and you're halfway there.",
+        "It always seems impossible until it's done."
+    ],
+    overthink: [
+        "baby girl always po mahal na mahal na mahal ikaw ni daddy po", 
+        "sayong sayo lng si daddy po baby ko:(",
+        "sorry na po baby ko:(", 
+        "ano po yan niooverthink mo baby ko? pagusapan na natin po:(",
+        "ikaw lng po palagi ang want and love ni daddy :(",
+        "I’m always here for baby, I'll listen to you whenever you need to talk, don’t overthink it :(",
+        "Don't let your thoughts overwhelm you. Take a moment, breathe, and relax.",
+        "Lahat ng iniisip mo, hindi mo kailangan harapin mag-isa, nandito lng always si daddy po :(",
+        "Hindi mo kailangang maging perpekto baby ko :( superrrrrrrr love ikaw ni daddy sa kung ano ikaw po :(",
+        "Mahal kita just the way you are, wag mo isipin na kulang ikaw baby ko :(",
+        "Dont be afraid baby ko, hinding hindi ikaw iiwan ni daddy po :(",
+    ]
+};
+
+function generateMessage() {
+    const category = document.getElementById("category").value;
+    const randomIndex = Math.floor(Math.random() * messages[category].length);
+    const messageBox = document.getElementById("message-box");
+    messageBox.textContent = messages[category][randomIndex];
+}
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Message</title>
+    <link rel="stylesheet" href="/bootstrap (1).css">
+    <link rel="stylesheet" href="/letter/style.css">
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', 'brush script mt' ;
+}
+
+.home{
+  background-image: url(https://w0.peakpx.com/wallpaper/810/273/HD-wallpaper-pink-christmas-snow.jpg);
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  align-items: center;
+  background-size: cover;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: rgb(251, 0, 255);
+  z-index: 100;
+  position: relative;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar .logo {
+  font-size: 1.5em;
+}
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+.navbar .nav-links a {
+  text-decoration: none;
+  color: rgb(251, 0, 255);
+  font-size: 1em;
+  transition: color 0.3s;
+}
+.navbar .nav-links a:hover {
+  color: #000;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: rgb(251, 0, 255);
+  margin: 3px 0;
+  transition: all 0.3s;
+}
+@media (max-width: 768px) {
+  .navbar .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 150px;
+      text-align: center;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      padding: 10px 0;
+      transition: all 0.3s ease-in-out;
+  }
+  .navbar .nav-links.active {
+      display: flex;
+      background-color: rgb(251, 0, 255);
+  }
+  .navbar .nav-links a {
+      color: white;
+      
+  }
+  .hamburger {
+      display: flex;
+  }
+}
+
+
+.message{
+  display: flex;
+  background-color: #eed9e357;
+  width: 400px;
+  height: 700px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 80px;
+  border-radius: 10px;
+  border: 3px solid white;
+  padding: 20px;
+  flex-wrap: wrap;
+  backdrop-filter: blur(2.5px);
+  z-index: 1;
+}
+
+.message h2 {
+  font-size: 3.7em;
+  text-align: center;
+  font-family: 'Brush Script MT', serif;
+  color: #fff;
+  text-shadow: 3px -3px 6px rgba(0,0,0,0.6);
+ 
+}
+.message p{
+    font-size: .78em;
+}
+.dear{
+  font-size: 1.1em;
+  font-family: 'poppins';
+  color: rgb(0, 0, 0);
+}
+
+.img{
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+  margin-top: -250px;
+}
+
+
+
+  /* customizable snowflake styling */
+  .snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
+  }
+  
+  .snowflake,.snowflake .inner{
+    animation-iteration-count:infinite;
+    animation-play-state:running
+  }
+    
+    @keyframes snowflakes-fall{
+      0%{transform:translateY(0)}
+      100%{transform:translateY(110vh)}
+    
+    }@keyframes snowflakes-shake
+    
+  {
+  0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;user-select:none;cursor:default;animation-name:snowflakes-shake;animation-duration:3s;animation-timing-function:ease-in-out}.snowflake .inner{animation-duration:10s;animation-name:snowflakes-fall;animation-timing-function:linear}.snowflake:nth-of-type(0){left:1%;animation-delay:0s}.snowflake:nth-of-type(0) .inner{animation-delay:0s}.snowflake:first-of-type{left:10%;animation-delay:1s}.snowflake:first-of-type .inner,.snowflake:nth-of-type(8) .inner{animation-delay:1s}.snowflake:nth-of-type(2){left:20%;animation-delay:.5s}.snowflake:nth-of-type(2) .inner,.snowflake:nth-of-type(6) .inner{animation-delay:6s}.snowflake:nth-of-type(3){left:30%;animation-delay:2s}.snowflake:nth-of-type(11) .inner,.snowflake:nth-of-type(3) .inner{animation-delay:4s}.snowflake:nth-of-type(4){left:40%;animation-delay:2s}.snowflake:nth-of-type(10) .inner,.snowflake:nth-of-type(4) .inner{animation-delay:2s}.snowflake:nth-of-type(5){left:50%;animation-delay:3s}.snowflake:nth-of-type(5) .inner{animation-delay:8s}.snowflake:nth-of-type(6){left:60%;animation-delay:2s}.snowflake:nth-of-type(7){left:70%;animation-delay:1s}.snowflake:nth-of-type(7) .inner{animation-delay:2.5s}.snowflake:nth-of-type(8){left:80%;animation-delay:0s}.snowflake:nth-of-type(9){left:90%;animation-delay:1.5s}.snowflake:nth-of-type(9) .inner{animation-delay:3s}.snowflake:nth-of-type(10){left:25%;animation-delay:0s}.snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+
+     </style>
+
+</head>
+<body>
+    <div id="home">
+        <div class="snowflakes" aria-hidden="true">
+          <div class="snowflake">
+            <div class="inner">❅</div>
+          </div>
+          <div class="snowflake">
+            <div class="inner">❅</div>
+          </div>
+          <div class="snowflake">
+            <div class="inner">❅</div>
+          </div>
+          <div class="snowflake">
+            <div class="inner">❅</div>
+          </div>
+          <div class="snowflake">
+            <div class="inner">❅</div>
+          </div>
+          <div class="snowflake">
+            <div class="inner">❅</div>
+          </div>
+          <div class="snowflake">
+            <div class="inner">❅</div>
+          </div>
+          <div class="snowflake">
+            <div class="inner">❅</div>
+          </div>
+          <div class="snowflake">
+            <div class="inner">❅</div>
+          </div>
+          <div class="snowflake">
+            <div class="inner">❅</div>
+          </div>
+          <div class="snowflake">
+            <div class="inner">❅</div>
+          </div>
+          <div class="snowflake">
+            <div class="inner">❅</div>
+          </div>
+        </div>
+        
+    <div class="home">
+
+        <header>
+            <nav class="navbar">
+                <div class="logo">KUPAL</div>
+                <ul class="nav-links">
+                    <li><a href="random.html">Random Messages</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="message">
+            <h2>Merry Christmas</h2>
+            
+            <div class="dear">
+                <p>Dear baby girl feifei,</p>
+                <p>
+                    MERRRRRRRRRRYYYYYY CHRISTMASSSSSSS BABYYY GIRLLLLLL🎇 🎊🎄🥳🎄🎊🎇 ILOVEYOU SO MUUUUUUUUUUCH BABY KO NA SUPERRRRRR CUTEEEEEEE 😘🥰🥰🥰 baby girl season of giving ngayon dapat ibigay nalng nila ikaw sakin 🙄🙄🙄 baby girl ko enjoy your day po ☹️☹️☹️ baby I just want to let you know that you are the best gift po na natanggap ko ☹️☹️☹️ every moment po na kausap kita, kakulitan, kalaro, and katampuhan, masaya po kc kasama kita ☹️☹️☹️ kahit masaya or malungkot si daddy po, ikaw pa rin ang iniisip ko po ☹️☹️☹️ baby girl hindi man tayo magkasama ngayon po, promise baby girl soon po magkasama tayo sa mga Christmas po ☹️☹️☹️ sasamahan kita baby girl ko kahit saan po, kahit nagwwash up ikaw 😋😋😋 eme kinagarampang ko nanamn 😭😭😭 basta yun baby wag mo po iisipin na iiwan ikaw ni daddy ☹️☹️☹️ kahit saan tayo makarating, ikaw at ikaw lng ang mahal and mamahalin ni daddy po ☹️☹️☹️ thank you baby sa lahat lahat po, di man ikaw aware po, madami ikaw nagawa sakin po na magagandang bagay and nagpapasalamat talaga ako dun po ☹️☹️☹️ naging extra special nanamn ang Christmas ko po kc kasama kita po ☹️☹️☹️ ILOVEYOU SO MUUUUUUUUUUCH MORE MY CUTE AND BEAUTIFUL BABYYYY GIRLLLLLL 😘🥰🥰🥰
+                </p>
+            </div>
+            
+        </div>
+<center>
+    <img class="img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b6c6aebb-2bf9-4796-80e9-0400f1229d7f/dfjchay-b9acf5c7-e212-4963-a267-9962c35a13cb.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2I2YzZhZWJiLTJiZjktNDc5Ni04MGU5LTA0MDBmMTIyOWQ3ZlwvZGZqY2hheS1iOWFjZjVjNy1lMjEyLTQ5NjMtYTI2Ny05OTYyYzM1YTEzY2IucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.fIvgeq7e3cOcx95Fohe5as50lGuW10F8abslVM1d90w" alt="">
+    </div>
+</center>
+        
+
+    </div>
+    
+
+        
+    
+
+       
+    
+
+      <script>
+
+const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+      </script>
+
+</body>
+</html>
